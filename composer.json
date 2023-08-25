@@ -1,0 +1,31 @@
+{
+  "name": "vedastudio/slim-apikey-auth",
+  "description": "Simple API Key Authentication Middleware for Slim 4 Framework",
+  "keywords": [
+    "middleware",
+    "rest-api",
+    "apikey",
+    "authentication",
+    "Slim",
+    "PHP"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/vedastudio/slim-apikey-auth",
+  "authors": [
+    {
+      "name": "Vitaliy Olos",
+      "email": "vedastudio@gmail.com"
+    }
+  ],
+  "require": {
+    "psr/http-message": "^2.0",
+    "psr/http-server-middleware": "^1.0.2",
+    "psr/http-server-handler": "^1.0.2",
+    "slim/slim": "4.*"
+  },
+  "autoload": {
+    "psr-4": {
+      "SlimApiKeyAuthMiddleware\\": "src/"
+    }
+  }
+}
