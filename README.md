@@ -20,7 +20,7 @@ use Slim\Psr7\Response;
 
 require __DIR__ . '/../vendor/autoload.php';
 
-$app->add(new Middleware\ApiKeyAuthMiddleware($apiKeys));
+$app->add(new SlimApiKeyAuth\ApiKeyAuthMiddleware($apiKeys));
 
 $app->get('/', function (Request $request, Response $response, $args) {
     $response->getBody()->write('Hello World');
@@ -46,7 +46,7 @@ $app = AppFactory::create();
 $app->get('/', function (Request $request, Response $response, $args) {
     $response->getBody()->write('Hello ');
     return $response;
-})->add(new Middleware\ApiKeyAuthMiddleware($apiKeys));
+})->add(new SlimApiKeyAuth\ApiKeyAuthMiddleware($apiKeys));
 
 $app->run();
 ```
@@ -61,7 +61,7 @@ use Slim\Exception\HttpException;
 
 require __DIR__ . '/../vendor/autoload.php';
 
-$app->add(new Middleware\ApiKeyAuthMiddleware($apiKeys));
+$app->add(new SlimApiKeyAuth\ApiKeyAuthMiddleware($apiKeys));
 
 $app->get('/', function (Request $request, Response $response, $args) {
     $response->getBody()->write('Hello World');
