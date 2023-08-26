@@ -2,7 +2,9 @@
 Simple API Key Authentication Middleware for Slim 4 Framework. Useful to apply API Key authentication on a Slim REST API.
 
 ## Install
+```
 composer require vedastudio/slim-apikey-auth
+```
 
 ## Usage
 Allowed API Keys are passed as an array or single Api Key. Only mandatory parameter is $apiKeys.
